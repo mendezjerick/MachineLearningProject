@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Rice Price Forecasting & Advisory (MLI Guide)
 
 This project follows the **MLI_Guide** proposal for "Rice Price Forecasting and Rule-Based Advisory System". It uses the provided `rice.csv` dataset to:
@@ -134,3 +135,6 @@ python -m http.server 8080
 
 - `MLI_Guide.pdf` – proposal text with objectives, rules, and SDG framing.
 - PSA/WFP/World Bank rice price statistics consolidated in `rice.csv`.
+=======
+# MachineLearningProject
+>>>>>>> bf49458e4f6cf28c5c0a2edb88636d0912d3928e
