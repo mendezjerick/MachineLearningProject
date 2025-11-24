@@ -1,0 +1,11 @@
+﻿__pycache__/
+.env
+artifacts/*
+!artifacts/README.md
+!artifacts/best_model.joblib
+!artifacts/metrics.json
+models/
+.DS_Store
+*.pyc
+*.pyo
+streamlit_app.log

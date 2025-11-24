@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rice Price Forecast Portal</title>
+    <link rel="stylesheet" href="web/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Rice Price Forecast Portal</h1>
+      <p>Interactively request regional forecasts powered by the MLI rice model.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Request a forecast</h2>
+        <form id="forecast-form">
+          <div class="field">
+            <label for="target-month">Target month (optional)</label>
+            <input type="month" id="target-month" name="target-month" />
+            <small>Choose the month/year you want to reach. Leave blank for "next available".</small>
+          </div>
+          <div class="field">
+            <label for="months-ahead">Months to generate</label>
+            <input type="number" id="months-ahead" name="months-ahead" min="1" max="24" value="1" />
+            <small>Set to 1 for a single month or increase for a multi-step forecast.</small>
+          </div>
+          <button type="submit">Get forecast</button>
+          <p id="form-status" role="status"></p>
+        </form>
+      </section>
+
+      <section class="card">
+        <div id="summary">
+          <h2>Results</h2>
+          <p>Submit a request to view predictions.</p>
+        </div>
+        <div class="controls" hidden>
+          <label for="month-filter">Display month</label>
+          <select id="month-filter"></select>
+        </div>
+        <div class="table-wrapper">
+          <table id="results-table">
+            <thead>
+              <tr>
+                <th>Region</th>
+                <th>Current date</th>
+                <th>Forecast date</th>
+                <th>Current price (PHP/kg)</th>
+                <th>Forecast price (PHP/kg)</th>
+                <th>% change</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with FastAPI + Vercel-ready static assets. Source data: rice.csv (PSA/WFP/WB).</p>
+    </footer>
+
+    <script src="web/app.js" type="module"></script>
+  </body>
+</html>
